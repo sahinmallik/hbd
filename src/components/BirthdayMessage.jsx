@@ -1,6 +1,7 @@
 import "./BirthdayMessage.scss";
 import React, { useState } from "react";
 import SpecialMessage from "./SpecialMessage";
+import Cake from "./Cake";
 
 const BirthdayMessage = () => {
   const [showNext, setShowNext] = useState(false);
@@ -12,7 +13,7 @@ const BirthdayMessage = () => {
   return (
     <>
       {showNext ? (
-        <SpecialMessage />
+        <Cake />
       ) : (
         <>
           <div className="birthday">
@@ -30,7 +31,7 @@ const BirthdayMessage = () => {
           </div>
           <div className="fa fa-birthday-cake"></div>
           <button className="button" onClick={handleClick}>
-            Go Next
+            Get Your Cake
           </button>
         </>
       )}
