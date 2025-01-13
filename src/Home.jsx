@@ -22,7 +22,8 @@ const Home = () => {
               <h2 className="mb-4 text-xl font-bold text-center">Disclaimer</h2>
               <p className="mb-4 text-center">
                 This pages are designed and Developed by Sahin Mallik and
-                requesting you to use headphone for better experience.
+                requesting you to use headphone for better experience. This
+                webpage will be live for 24 hours only.
               </p>
             </div>
           </div>
