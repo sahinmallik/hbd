@@ -9,21 +9,33 @@ const Song = () => {
   let audio = null;
 
   const playYourSong = () => {
-    audio = new Audio("/src/Song/ishq-sufiyana-128-ytshorts.savetube.me.mp3");
-    audio.play();
-    setIsSongPlaying(true);
-    setCurrentSong("yourSong");
-    setShowSongComponent(false);
+    audio = new Audio("/audio/ishq-sufiyana-128-ytshorts.savetube.me.mp3");
+    audio
+      .play()
+      .then(() => {
+        setIsSongPlaying(true);
+        setCurrentSong("yourSong");
+        setShowSongComponent(false);
+      })
+      .catch((error) => {
+        console.error("Error playing your song:", error);
+      });
   };
 
   const playDedicatedSong = () => {
     audio = new Audio(
-      "/src/Song/ek-dil-ek-jaan-from-padmaavat-128-ytshorts.savetube.me.mp3"
+      "/audio/ek-dil-ek-jaan-from-padmaavat-128-ytshorts.savetube.me.mp3"
     );
-    audio.play();
-    setIsSongPlaying(true);
-    setCurrentSong("dedicatedSong");
-    setShowSongComponent(false);
+    audio
+      .play()
+      .then(() => {
+        setIsSongPlaying(true);
+        setCurrentSong("dedicatedSong");
+        setShowSongComponent(false);
+      })
+      .catch((error) => {
+        console.error("Error playing the dedicated song:", error);
+      });
   };
 
   return (
