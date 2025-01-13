@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import "tailwindcss/tailwind.css";
-import Photos from "./Photos";
 import Rose from "./Rose";
 
 const SpecialMessage = () => {
@@ -14,7 +13,7 @@ const SpecialMessage = () => {
   return (
     <>
       {showNext ? (
-        <Photos />
+        <Rose />
       ) : (
         <>
           <div className="flex items-center justify-center min-h-screen p-4 bg-gray-900">
@@ -71,11 +70,12 @@ const SpecialMessage = () => {
                     am not gonna bore you anymore. Time to leave now. I don't
                     know what is my value in your life now a days, but you will
                     always be that cute little girl whom I love. Last something
-                    for you.
+                    for you. Goodbye, take care, stay happy, stay safe, stay
+                    blessed.
                   </p>
                   <button
                     onClick={handleClick}
-                    className="p-3 text-lg font-semibold text-white transition duration-300 ease-in-out transform bg-green-500 rounded-md shadow-lg mt-3px-6 hover:bg-green-700 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-75"
+                    className="justify-center p-3 text-lg font-semibold text-white transition duration-300 ease-in-out transform bg-green-500 rounded-md shadow-lg mt-3px-6 hover:bg-green-700 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-75"
                   >
                     Click here
                   </button>
