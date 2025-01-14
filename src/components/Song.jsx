@@ -23,7 +23,7 @@ const Song = () => {
   };
 
   const playDedicatedSong = () => {
-    audio = new Audio("/audio/perfect-128-ytshorts.savetube.me.mp3");
+    audio = new Audio("/audio/tere-naina-128-ytshorts.savetube.me.mp3");
     audio
       .play()
       .then(() => {

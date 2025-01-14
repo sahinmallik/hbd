@@ -32,10 +32,10 @@ const SpecialMessage = () => {
                   Adhuri Baatein
                 </Tab>
                 <Tab className="flex-1 px-4 py-2 text-center bg-gray-700 rounded cursor-pointer hover:bg-gray-600">
-                  Alvida
+                  Special PDF
                 </Tab>
                 <Tab className="flex-1 px-4 py-2 text-center bg-gray-700 rounded cursor-pointer hover:bg-gray-600">
-                  Special PDF
+                  Alvida
                 </Tab>
               </TabList>
 
@@ -72,6 +72,16 @@ const SpecialMessage = () => {
                   I am Sorry.
                 </p>
               </TabPanel>
+              <TabPanel className="flex items-center justify-center bg-gray-900">
+                <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
+                  <div className="w-full max-w-4xl p-4 bg-gray-700 rounded-lg shadow-md h-96">
+                    <Viewer
+                      fileUrl="/pdfs/special.pdf"
+                      plugins={[defaultLayoutPluginInstance]}
+                    />
+                  </div>
+                </Worker>
+              </TabPanel>
               <TabPanel className="flex flex-col items-center">
                 <p className="mb-4 text-justify text-gray-300">
                   So I have taken a significant amount of time of your life. I
@@ -86,16 +96,6 @@ const SpecialMessage = () => {
                 >
                   Click here
                 </button>
-              </TabPanel>
-              <TabPanel className="flex items-center justify-center bg-gray-900">
-                <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
-                  <div className="w-full max-w-4xl p-4 bg-gray-700 rounded-lg shadow-md h-96">
-                    <Viewer
-                      fileUrl="/pdfs/special.pdf"
-                      plugins={[defaultLayoutPluginInstance]}
-                    />
-                  </div>
-                </Worker>
               </TabPanel>
             </Tabs>
           </div>
